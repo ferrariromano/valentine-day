@@ -1,4 +1,5 @@
 // Animation Timeline
+PuterLagu();
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
@@ -271,7 +272,7 @@ const animationTimeline = () => {
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     // tl.restart();
-    // PuterLagu();
+    PuterLagu();
     location.href = "flower.html"
   });
 };
