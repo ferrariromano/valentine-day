@@ -308,7 +308,7 @@ resolveFetch().then(animationTimeline());
 PuterLagu();
 function PuterLagu() {
   var lagu = document.getElementById("lagu");
-  return lagu.paused ? lagu.play() : lagu.pause();
+  lagu.play()
 };
 
 
