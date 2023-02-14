@@ -1,32 +1,11 @@
-// trigger to play music in the background with sweetalert
-window.addEventListener('load', () => {
-  Swal.fire({
-    title: 'Do you want to play music in the background?',
-    // text: "You won't be able to revert this!",
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Yes',
-    cancelButtonText: 'No',
-  }).then((result) => {
-    if (result.isConfirmed) {
-      document.querySelector('.song').play();
-      resolveFetch().then(animationTimeline());
-    } else {
-      resolveFetch().then(animationTimeline());
-    }
-  });
-});
-
-
-
-
 // Animation Timeline
 const animationTimeline = () => {
+  PuterLagu();
+
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
   const hbd = document.getElementsByClassName("wish-hbd")[0];
+
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
@@ -35,6 +14,7 @@ const animationTimeline = () => {
   hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
     .join("</span><span>")}</span`;
+    
 
   const ideaTextTrans = {
     opacity: 0,
@@ -331,10 +311,12 @@ const resolveFetch = () => {
 resolveFetch().then(animationTimeline());
 
 // PuterLagu();
-// function PuterLagu() {
-//   var lagu = document.getElementById("lagu");
-//   lagu.play()
-// };
+
+function PuterLagu() {
+  var lagu = document.getElementById("lagu");
+  return lagu.paused ? lagu.play() : lagu.pause();
+};
+
 
 
 
