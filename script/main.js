@@ -18,6 +18,7 @@ const animationTimeline = () => {
     y: -20,
     rotationX: 5,
     skewX: "15deg",
+    
   };
 
   const ideaTextTransLeave = {
@@ -306,7 +307,7 @@ const resolveFetch = () => {
 
 resolveFetch().then(animationTimeline());
 
-// PuterLagu();
+PuterLagu();
 function PuterLagu() {
   var lagu = document.getElementById("lagu");
   lagu.play()
