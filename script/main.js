@@ -1,5 +1,28 @@
+// trigger to play music in the background with sweetalert
+window.addEventListener('load', () => {
+  Swal.fire({
+    title: 'Do you want to play music in the background?',
+    // text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes',
+    cancelButtonText: 'No',
+  }).then((result) => {
+    if (result.isConfirmed) {
+      document.querySelector('.song').play();
+      resolveFetch().then(animationTimeline());
+    } else {
+      resolveFetch().then(animationTimeline());
+    }
+  });
+});
+
+
+
+
 // Animation Timeline
-PuterLagu();
 const animationTimeline = () => {
   // Spit chars that needs to be animated individually
   const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
@@ -273,7 +296,7 @@ const animationTimeline = () => {
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     // tl.restart();
-    PuterLagu();
+    // PuterLagu();
     location.href = "flower.html"
   });
 };
@@ -307,11 +330,11 @@ const resolveFetch = () => {
 
 resolveFetch().then(animationTimeline());
 
-PuterLagu();
-function PuterLagu() {
-  var lagu = document.getElementById("lagu");
-  lagu.play()
-};
+// PuterLagu();
+// function PuterLagu() {
+//   var lagu = document.getElementById("lagu");
+//   lagu.play()
+// };
 
 
 
