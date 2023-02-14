@@ -306,7 +306,7 @@ const resolveFetch = () => {
 
 resolveFetch().then(animationTimeline());
 
-PuterLagu();
+// PuterLagu();
 function PuterLagu() {
   var lagu = document.getElementById("lagu");
   lagu.play()
