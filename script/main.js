@@ -272,7 +272,7 @@ const animationTimeline = () => {
   replyBtn.addEventListener("click", () => {
     // tl.restart();
     location.href = "flower.html"
-    // PuterLagu();
+    PuterLagu();
   });
 };
 
@@ -307,7 +307,7 @@ resolveFetch().then(animationTimeline());
 
 
 
-// PuterLagu();
+PuterLagu();
 
 
 // function PuterLagu() {
