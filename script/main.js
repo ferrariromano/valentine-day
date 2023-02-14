@@ -271,8 +271,8 @@ const animationTimeline = () => {
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     // tl.restart();
-    location.href = "flower.html"
     PuterLagu();
+    location.href = "flower.html"
   });
 };
 
@@ -310,10 +310,10 @@ resolveFetch().then(animationTimeline());
 PuterLagu();
 
 
-// function PuterLagu() {
-//   var lagu = document.getElementById("lagu");
-//   return lagu.paused ? lagu.play() : lagu.pause();
-// };
+function PuterLagu() {
+  var lagu = document.getElementById("lagu");
+  return lagu.paused ? lagu.play() : lagu.pause();
+};
 
 
 
